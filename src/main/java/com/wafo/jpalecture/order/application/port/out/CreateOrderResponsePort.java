@@ -5,5 +5,5 @@ import com.wafo.jpalecture.order.domain.Order;
 
 public interface CreateOrderResponsePort {
 
-    CreateOrderResponse response(Order order);
+    CreateOrderResponse execute(Order order);
 }

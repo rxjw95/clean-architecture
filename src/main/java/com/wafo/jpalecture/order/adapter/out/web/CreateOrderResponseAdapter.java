@@ -12,7 +12,7 @@ import java.util.List;
 public class CreateOrderResponseAdapter implements CreateOrderResponsePort {
 
     @Override
-    public CreateOrderResponse response(Order order) {
+    public CreateOrderResponse execute(Order order) {
         List<Long> productIds = order.getProducts().stream().map(Product::getProductId).toList();
         int totalAmount = order.getTotalAmount();
         return new CreateOrderResponse(productIds, totalAmount);

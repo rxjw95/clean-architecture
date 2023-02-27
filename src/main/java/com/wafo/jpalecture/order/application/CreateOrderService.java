@@ -23,11 +23,11 @@ public class CreateOrderService implements CreateOrderUseCase {
 
     @Override
     @Transactional
-    public CreateOrderResponse create(CreateOrderCommand command) {
-        Order order = createOrderPersistencePort.createOrder(command);
+    public CreateOrderResponse execute(CreateOrderCommand command) {
+        Order order = createOrderPersistencePort.execute(command);
         Products products = Products.from(order.getProducts());
         products.validateProductCount(command.getProductIds().size());
 
-        return createOrderResponsePort.response(order);
+        return createOrderResponsePort.execute(order);
     }
 }

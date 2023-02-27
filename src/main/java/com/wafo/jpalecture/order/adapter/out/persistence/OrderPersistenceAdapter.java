@@ -19,7 +19,7 @@ public class OrderPersistenceAdapter implements CreateOrderPersistencePort {
     }
 
     @Override
-    public Order createOrder(CreateOrderCommand command) {
+    public Order execute(CreateOrderCommand command) {
         List<ProductEntity> productEntities = jpaProductRepository.findAllById(command.getProductIds());
 
         OrderEntity orderEntity = new OrderEntity();

@@ -19,6 +19,6 @@ public class CreateOrderController  {
 
     @PostMapping("/order")
     public CreateOrderResponse order(@RequestBody CreateOrderCommand command) {
-        return createOrderUseCase.create(command);
+        return createOrderUseCase.execute(command);
     }
 }
