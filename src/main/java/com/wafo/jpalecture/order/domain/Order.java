@@ -20,7 +20,6 @@ public class Order {
     }
 
     private Order(Products products) {
-        products.validateProductCount();
         this.products = products;
         this.totalAmount = products.calculatePriceAmount();
     }
