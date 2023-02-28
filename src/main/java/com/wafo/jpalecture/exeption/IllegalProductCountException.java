@@ -1,4 +1,4 @@
-package com.wafo.jpalecture.order.exeption;
+package com.wafo.jpalecture.exeption;
 
 public class IllegalProductCountException extends RuntimeException {
 
