@@ -1,7 +1,7 @@
 package com.wafo.jpalecture.order.adapter.out.web;
 
 import com.wafo.jpalecture.order.application.dto.CreateProductResponse;
-import com.wafo.jpalecture.order.application.port.out.CreateProductResponsePort;
+import com.wafo.jpalecture.order.application.outport.CreateProductResponsePort;
 import com.wafo.jpalecture.order.domain.Product;
 import org.springframework.stereotype.Component;
 

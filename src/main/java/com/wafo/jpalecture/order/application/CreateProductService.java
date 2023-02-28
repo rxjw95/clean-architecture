@@ -1,10 +1,10 @@
 package com.wafo.jpalecture.order.application;
 
-import com.wafo.jpalecture.order.application.port.command.CreateProductCommand;
+import com.wafo.jpalecture.order.application.command.CreateProductCommand;
 import com.wafo.jpalecture.order.application.dto.CreateProductResponse;
-import com.wafo.jpalecture.order.application.port.in.CreateProductUseCase;
-import com.wafo.jpalecture.order.application.port.out.CreateProductPort;
-import com.wafo.jpalecture.order.application.port.out.CreateProductResponsePort;
+import com.wafo.jpalecture.order.application.inport.CreateProductUseCase;
+import com.wafo.jpalecture.order.application.outport.CreateProductPort;
+import com.wafo.jpalecture.order.application.outport.CreateProductResponsePort;
 import com.wafo.jpalecture.order.domain.Product;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;

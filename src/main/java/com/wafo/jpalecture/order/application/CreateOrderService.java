@@ -1,10 +1,10 @@
 package com.wafo.jpalecture.order.application;
 
-import com.wafo.jpalecture.order.application.port.command.CreateOrderCommand;
+import com.wafo.jpalecture.order.application.command.CreateOrderCommand;
 import com.wafo.jpalecture.order.application.dto.CreateOrderResponse;
-import com.wafo.jpalecture.order.application.port.in.CreateOrderUseCase;
-import com.wafo.jpalecture.order.application.port.out.CreateOrderPort;
-import com.wafo.jpalecture.order.application.port.out.CreateOrderResponsePort;
+import com.wafo.jpalecture.order.application.inport.CreateOrderUseCase;
+import com.wafo.jpalecture.order.application.outport.CreateOrderPort;
+import com.wafo.jpalecture.order.application.outport.CreateOrderResponsePort;
 import com.wafo.jpalecture.order.domain.Products;
 import com.wafo.jpalecture.order.domain.Order;
 import com.wafo.jpalecture.order.domain.Product;

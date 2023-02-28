@@ -1,4 +1,4 @@
-package com.wafo.jpalecture.order.application.port.command;
+package com.wafo.jpalecture.order.application.command;
 
 public class CreateProductCommand {
 
