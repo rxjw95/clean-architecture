@@ -1,4 +1,4 @@
-package com.wafo.jpalecture.product.application.outport;
+package com.wafo.jpalecture.product.application.port.out;
 
 import com.wafo.jpalecture.product.domain.Product;
 import com.wafo.jpalecture.product.domain.Products;

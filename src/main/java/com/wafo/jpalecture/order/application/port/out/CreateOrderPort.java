@@ -1,4 +1,4 @@
-package com.wafo.jpalecture.order.application.outport;
+package com.wafo.jpalecture.order.application.port.out;
 
 import com.wafo.jpalecture.order.domain.Order;
 

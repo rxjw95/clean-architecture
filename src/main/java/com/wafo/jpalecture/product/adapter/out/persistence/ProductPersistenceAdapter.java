@@ -1,6 +1,6 @@
 package com.wafo.jpalecture.product.adapter.out.persistence;
 
-import com.wafo.jpalecture.product.application.outport.CreateProductPort;
+import com.wafo.jpalecture.product.application.port.out.CreateProductPort;
 import com.wafo.jpalecture.product.domain.Product;
 import com.wafo.jpalecture.product.domain.Products;
 import org.springframework.stereotype.Component;

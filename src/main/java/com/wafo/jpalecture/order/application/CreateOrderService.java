@@ -2,9 +2,8 @@ package com.wafo.jpalecture.order.application;
 
 import com.wafo.jpalecture.order.application.command.CreateOrderCommand;
 import com.wafo.jpalecture.order.application.dto.CreateOrderResponse;
-import com.wafo.jpalecture.order.application.inport.CreateOrderUseCase;
-import com.wafo.jpalecture.order.application.outport.CreateOrderPort;
-import com.wafo.jpalecture.order.application.outport.CreateOrderResponsePort;
+import com.wafo.jpalecture.order.application.port.in.CreateOrderUseCase;
+import com.wafo.jpalecture.order.application.port.out.CreateOrderPort;
 import com.wafo.jpalecture.order.domain.Products;
 import com.wafo.jpalecture.order.domain.Order;
 import com.wafo.jpalecture.order.domain.Product;
@@ -17,11 +16,11 @@ import java.util.List;
 public class CreateOrderService implements CreateOrderUseCase {
 
     private final CreateOrderPort createOrderPort;
-    private final CreateOrderResponsePort createOrderResponsePort;
+    private final OrderResponseGenerator orderResponseGenerator;
 
-    public CreateOrderService(CreateOrderPort createOrderPort, CreateOrderResponsePort createOrderResponsePort) {
+    public CreateOrderService(CreateOrderPort createOrderPort, OrderResponseGenerator orderResponseGenerator) {
         this.createOrderPort = createOrderPort;
-        this.createOrderResponsePort = createOrderResponsePort;
+        this.orderResponseGenerator = orderResponseGenerator;
     }
 
     @Override
@@ -37,7 +36,7 @@ public class CreateOrderService implements CreateOrderUseCase {
 
         Order order = createOrder(productsWrap);
 
-        return createOrderResponsePort.execute(order);
+        return orderResponseGenerator.generateCreateOrderResponse(order);
     }
 
     private Order createOrder(Products products) {

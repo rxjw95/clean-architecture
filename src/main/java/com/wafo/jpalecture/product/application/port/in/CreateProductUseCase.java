@@ -1,4 +1,4 @@
-package com.wafo.jpalecture.product.application.inport;
+package com.wafo.jpalecture.product.application.port.in;
 
 import com.wafo.jpalecture.product.application.command.CreateProductCommand;
 import com.wafo.jpalecture.product.application.command.CreateProductsCommand;

@@ -1,4 +1,4 @@
-package com.wafo.jpalecture.order.application.inport;
+package com.wafo.jpalecture.order.application.port.in;
 
 import com.wafo.jpalecture.order.application.command.CreateOrderCommand;
 import com.wafo.jpalecture.order.application.dto.CreateOrderResponse;

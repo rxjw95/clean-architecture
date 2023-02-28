@@ -1,6 +1,6 @@
 package com.wafo.jpalecture.order.adapter.out.persistence;
 
-import com.wafo.jpalecture.order.application.outport.CreateOrderPort;
+import com.wafo.jpalecture.order.application.port.out.CreateOrderPort;
 import com.wafo.jpalecture.order.domain.Products;
 import com.wafo.jpalecture.order.domain.Order;
 import org.springframework.stereotype.Component;

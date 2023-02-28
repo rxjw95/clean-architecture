@@ -4,7 +4,7 @@ import com.wafo.jpalecture.product.application.command.CreateProductCommand;
 import com.wafo.jpalecture.product.application.command.CreateProductsCommand;
 import com.wafo.jpalecture.product.application.dto.CreateProductResponse;
 import com.wafo.jpalecture.product.application.dto.CreateProductsResponse;
-import com.wafo.jpalecture.product.application.inport.CreateProductUseCase;
+import com.wafo.jpalecture.product.application.port.in.CreateProductUseCase;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
