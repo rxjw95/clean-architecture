@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class OrderAdapter implements CreateOrderPort {
+public class OrderPersistenceAdapter implements CreateOrderPort {
 
     private final DataJpaOrderRepository jpaOrderRepository;
     private final DataJpaProductRepository jpaProductRepository;
 
-    public OrderAdapter(DataJpaOrderRepository jpaOrderRepository, DataJpaProductRepository jpaProductRepository) {
+    public OrderPersistenceAdapter(DataJpaOrderRepository jpaOrderRepository, DataJpaProductRepository jpaProductRepository) {
         this.jpaOrderRepository = jpaOrderRepository;
         this.jpaProductRepository = jpaProductRepository;
     }
