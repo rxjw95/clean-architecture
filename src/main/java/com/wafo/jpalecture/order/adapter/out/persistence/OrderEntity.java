@@ -1,5 +1,6 @@
 package com.wafo.jpalecture.order.adapter.out.persistence;
 
+import com.wafo.jpalecture.order.domain.Products;
 import com.wafo.jpalecture.order.domain.Order;
 import jakarta.persistence.*;
 
@@ -35,6 +36,9 @@ public class OrderEntity {
     }
 
     public Order mapToDomain() {
-        return Order.withId(this.orderId, this.productEntities.stream().map(ProductEntity::mapToDomain).toList());
+        return Order.withId(
+                this.orderId,
+                Products.from(this.productEntities.stream()
+                        .map(ProductEntity::mapToDomain).toList()));
     }
 }

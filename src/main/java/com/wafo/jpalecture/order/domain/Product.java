@@ -4,25 +4,25 @@ public class Product {
 
     private Long productId;
     private String productName;
-    private int money;
+    private int price;
 
-    public static Product withoutId(String productName, int money) {
-        return new Product(productName, money);
+    public static Product withoutId(String productName, int price) {
+        return new Product(productName, price);
     }
 
-    public static Product withId(Long productId, String productName, int money) {
-        return new Product(productId, productName, money);
+    public static Product withId(Long productId, String productName, int price) {
+        return new Product(productId, productName, price);
     }
 
-    private Product(String productName, int money) {
+    private Product(String productName, int price) {
         this.productName = productName;
-        this.money = money;
+        this.price = price;
     }
 
-    private Product(Long productId, String productName, int money) {
+    private Product(Long productId, String productName, int price) {
         this.productId = productId;
         this.productName = productName;
-        this.money = money;
+        this.price = price;
     }
 
     public Long getProductId() {
@@ -33,7 +33,7 @@ public class Product {
         return productName;
     }
 
-    public int getMoney() {
-        return money;
+    public int getPrice() {
+        return price;
     }
 }

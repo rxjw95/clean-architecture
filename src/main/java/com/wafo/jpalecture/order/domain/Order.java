@@ -1,36 +1,31 @@
 package com.wafo.jpalecture.order.domain;
 
-import java.util.List;
-
 public class Order {
     private Long orderId;
-    private List<Product> products;
+    private Products products;
     private int totalAmount;
 
-    public static Order withoutId(List<Product> products) {
+    public static Order withoutId(Products products) {
         return new Order(products);
     }
 
-    public static Order withId(Long orderId, List<Product> products) {
+    public static Order withId(Long orderId, Products products) {
         return new Order(orderId, products);
     }
 
-    private Order(Long orderId, List<Product> products) {
+    private Order(Long orderId, Products products) {
         this.orderId = orderId;
         this.products = products;
-        this.totalAmount = calculateProductPriceAmount();
+        this.totalAmount = products.calculatePriceAmount();
     }
 
-    private Order(List<Product> products) {
+    private Order(Products products) {
+        products.validateProductCount();
         this.products = products;
-        this.totalAmount = calculateProductPriceAmount();
+        this.totalAmount = products.calculatePriceAmount();
     }
 
-    private int calculateProductPriceAmount() {
-        return this.products.stream().map(Product::getMoney).mapToInt(Integer::valueOf).sum();
-    }
-
-    public List<Product> getProducts() {
+    public Products getProducts() {
         return products;
     }
 

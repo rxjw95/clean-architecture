@@ -1,4 +1,4 @@
-package com.wafo.jpalecture.order.application.port.dto;
+package com.wafo.jpalecture.order.application.dto;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package com.wafo.jpalecture.order.adapter.in.web;
 
-import com.wafo.jpalecture.order.application.port.dto.CreateOrderCommand;
+import com.wafo.jpalecture.order.application.port.command.CreateOrderCommand;
 import com.wafo.jpalecture.order.application.port.in.CreateOrderUseCase;
-import com.wafo.jpalecture.order.application.port.dto.CreateOrderResponse;
+import com.wafo.jpalecture.order.application.dto.CreateOrderResponse;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
