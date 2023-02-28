@@ -1,7 +1,6 @@
 package com.wafo.jpalecture.order.adapter.out.persistence;
 
 import com.wafo.jpalecture.order.application.port.out.CreateOrderPort;
-import com.wafo.jpalecture.order.domain.Products;
 import com.wafo.jpalecture.order.domain.Order;
 import org.springframework.stereotype.Component;
 
@@ -19,9 +18,8 @@ public class OrderPersistenceAdapter implements CreateOrderPort {
     }
 
     @Override
-    public Order create(Order order) {
-        Products products = order.getProducts();
-        List<ProductEntity> productEntities = jpaProductRepository.findAllById(products.getIds());
+    public Order create(List<Long> productIds) {
+        List<ProductEntity> productEntities = jpaProductRepository.findAllById(productIds);
 
         OrderEntity orderEntity = new OrderEntity();
         orderEntity.addAll(productEntities);

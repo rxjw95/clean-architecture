@@ -21,7 +21,6 @@ public class Order {
 
     private Order(Products products) {
         this.products = products;
-        this.totalAmount = products.calculatePriceAmount();
     }
 
     public Products getProducts() {
