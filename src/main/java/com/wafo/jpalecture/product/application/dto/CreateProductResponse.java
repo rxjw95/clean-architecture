@@ -1,4 +1,4 @@
-package com.wafo.jpalecture.order.application.dto;
+package com.wafo.jpalecture.product.application.dto;
 
 public class CreateProductResponse {
     private final Long productId;

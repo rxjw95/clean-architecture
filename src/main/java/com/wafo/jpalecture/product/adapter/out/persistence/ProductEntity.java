@@ -1,9 +1,9 @@
-package com.wafo.jpalecture.order.adapter.out.persistence;
+package com.wafo.jpalecture.product.adapter.out.persistence;
 
-import com.wafo.jpalecture.order.domain.Product;
+import com.wafo.jpalecture.product.domain.Product;
 import jakarta.persistence.*;
 
-@Entity(name = "forOrder")
+@Entity(name = "forProduct")
 @Table(name = "product")
 @Access(AccessType.FIELD)
 public class ProductEntity {
